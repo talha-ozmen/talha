@@ -149,23 +149,96 @@ console.log(4 > 2);
 console.log(4 != 2);
 
 
-var not1 = Number(document.getElementById("not1").value);
-var not2 = Number(document.getElementById("not2").value);
-var not3 = Number(document.getElementById("not3").value);
-var not4 = Number(document.getElementById("not4").value);
 
-var toplam = not1 + not2 + not3 + not4;
+//yaptığım
 
 
-var ortalama = (not1 + not2 + not3 + not4) / 4;
+
+
 // veya
 var ortalama2 = toplam / 4;
 
-console.log(ortalama, ortalama2);
-
-
 var button = document.getElementById("calc");
 button.addEventListener('click', function () {
+    var not1 = Number(document.getElementById("not1").value);
+    var not2 = Number(document.getElementById("not2").value);
+    var not3 = Number(document.getElementById("not3").value);
+    var not4 = Number(document.getElementById("not4").value);
+    var toplam = not1 + not2 + not3 + not4;
+
+
+    var ortalama = (not1 + not2 + not3 + not4) / 4;
+
     document.getElementById("ort").innerHTML = ortalama;
+    console.log(ortalama)
 });
+
+
+
+
+
+
+
+// // doğrusu
+// var button = document.getElementById("calc");
+// button.addEventListener('click', function () {
+//     // Get the current values of the inputs when the button is clicked
+//     var not1 = Number(document.getElementById("not1").value);
+//     var not2 = Number(document.getElementById("not2").value);
+//     var not3 = Number(document.getElementById("not3").value);
+//     var not4 = Number(document.getElementById("not4").value);
+
+//     // Calculate the total and average
+//     var toplam = not1 + not2 + not3 + not4;
+//     var ortalama = toplam / 4;
+
+//     // Display the average
+//     document.getElementById("ort").innerHTML = ortalama;
+// });
+
+
+function insan(adi, yasi) {
+    console.log(`isim: ${adi}  yaşı: ${yasi}`);
+}
+
+insan("t", 25);
+
+//-----------------------------------------------------
+
+var karecevap
+
+function kare(x) {
+    karecevap = x * x;
+}
+
+var karesias;
+
+function kareal() {
+    karesias = Number(document.getElementById("kare-al").value);
+    kare(karesias);
+    document.getElementById("karesinin-cevabı").innerHTML = karecevap;
+}
+
+console.clear();
+
+
+var rastgelesayi = Math.random() * 100;
+
+var yuvarlanmıssayi = Math.round(rastgelesayi);
+
+console.log(yuvarlanmıssayi)
+
+var tahmini;
+
+function sayibulmaoyunu(){
+    tahmini = Number(document.getElementById("sayibulma").value);
+
+    if(yuvarlanmıssayi == tahmini){
+        document.getElementById("kutlama").innerHTML = "doğru bildiniz";
+    }
+   else{
+        document.getElementById("kutlama").innerHTML ="cevap " + tahmini + " değil tekrar deneyiniz";
+    }
+
+}
 
