@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.Bölüm</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <span>Form Nesneleri</span>
+    <div class="formElemanlari">
+      <div>
+        <form>
+          <input name="langueage" list="langueages" />
+          <datalist id="langueages">
+            <option value="Html"></option>
+            <option value="Css"></option>
+            <option value="JavaScript"></option>
+            <option value="Php"></option>
+            <option value="Node 35"></option>
+          </datalist>
+        </form>
+      </div>
+      <div>
+        <form>
+          Kullanici Adi : <input type="text" name="username" /> <br />
+          Güvenlik Seviyesi :
+        </form>
+      </div>
+      <div>
+        <form
+          oninput="Calculate.value=parseInt(number1.value)+parseInt(number2.value)">
+          0 
+          <input type="range" name="name1" id="number1" value="50" /> 
+          100
+          <br />
+          <input type="number" name="number2" id="number2" value="50" /><br />
+          =<br />
+          <output name="Calculate" for="number1 number2"> </output>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <span>Fotoğrafı Sürükleyerek Silme</span>
+    <div style="margin: 20px;">  
+        <img src="img/JOKER.jpg" width="360px" height="325px" alt="" id="picture" draggable="">
+        <p style="float: right;"><img src="img/BATMAN.jpg" width="360px" height="325px" alt="sil" ondragenter="return false" ondragover="return false" ondrop="Delete()"></p>
+        <script>
+            function Delete(){
+                let pic=document.querySelector('#picture')
+                pic.parentNode.removeChild(pic)}
+        </script>
+    </div>
+  <hr>
+  <div>
+    <div class="normal">Normal Olan Div</div>
+    <div class="normal transform" st>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequatur ab dignissimos alias, libero vero?
+    </div>
+    <div class="normal transform1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequatur ab dignissimos alias, libero vero?
+    </div>
+    <div class="normal transform2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequatur ab dignissimos alias, libero vero?
+    </div>
+  </div>
+  <hr>
+   <div class="normal1">
+    <div class="transformm">1.DİV</div>
+   </div>
+   <div class="normal2"><div class="transformm">2.DİV</div></div>
+    
+   </div>
+    <hr>
+    <br>
+    <div class="transtition">
+        <div class="transtition">Lorem ipsum dolor sit amet consectetur adipisicing elit. In dignissimos optio quod fugit ab vel.</div>
+    </div>
+    <hr>
+    <br>
+    <div class="kaydir">
+        <div>Sağ</div>
+        <div>Orta</div>
+        <div>Sol</div>
+    </div>
+    <hr>
+    <br>
+        <div class="rules "></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> 
+  </body>
+</html>

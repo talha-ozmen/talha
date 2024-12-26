@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburger</title>
+  <link rel="stylesheet" href="shadow.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+<div class="off-screen-menu">
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Kerem</li>
+  </ul>
+  <div class="header-navbar">
+    <div class="container container-hiza">
+      
+      <div class="header-navbar-content">
+        <ul>
+          <li><a href="#" class="color">Ana Sayfa</a></li>
+          <li><a href="#">Kurumsal</a></li>
+          <li><a href="#">Projeler</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </div>
+        <div class="image">
+          <img src="img/kozay.png" class="img" alt="" />
+        </div>
+    
+    </div>
+  </div>
+</div>
+<nav>
+  <div class="ham-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+ <script>
+  const hamMenu = document.querySelector('.ham-menu');
+  const offScreenMenu = document.querySelector('.off-screen-menu')
+  hamMenu.addEventListener('click',() => {
+    hamMenu.classList.toggle('active') 
+    offScreenMenu.classList.toggle('active')
+   })
+ </script>
+
+</body>
+</html>

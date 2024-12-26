@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Bölüm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- yeni form nesneleri -->
+    <section>
+        <div class="new-form">
+            <form action="">
+                <input name="language" list="languages">
+
+                <datalist id="languages">
+                    <option value="HTML"></option>
+                    <option value="CSS3"></option>
+                    <option value="JavaScript"></option>
+                    <option value="PHP"></option>
+                </datalist>
+
+            </form>
+
+            <hr>
+
+            <form action="">
+                Kullanıcı Adı: <input type="text" name="username"><br>
+                <!-- Güvenlik Seviyesi: <keygen name="security"> // bu kodda keygen hata veriyor -->
+            </form>
+
+            <hr>
+
+            <form action="" oninput="calculate.value=parseInt(number1.value)+parseInt(number2.value)">
+                0 <input type="range" id="number1" name="number1" value="50"> 100 <br>
+                +<br>
+                <input type="number" id="number2" name="number2" value="50"><br>
+                =<br>
+                <output name="calculate" for="number1 number2"></output>
+            </form>
+        </div>
+        <hr>
+    </section>
+
+    <!-- sürükle bırak -->
+    <section>
+        <div class="drag-and-drop">
+            <div class="bin">
+                <img src="img/pngtree-banana-peel-png-image_6470994.png" alt="Çöp Kutusu" id="picture" draggable="true">
+            </div>
+
+            <div class="banana-peel">
+                <p>
+                    <img src="img/png-clipart-computer-icons-recycling-bin-molinillo-others-rectangle-recycling.png"
+                        alt="Muz Kabuğu" ondragenter="return false" ondragover="return false" ondrop="Delete();">
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+    </section>
+
+    <!-- özel font tanımlama -->
+
+    <section>
+        <div class="special-font">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, totam?</p>
+        </div>
+        <hr>
+    </section>
+
+    <!-- transform -->
+
+    <section>
+        <div class="box-container">
+
+            <div>
+                <div class="box-red"></div>
+                <div class="box-blue"></div>
+
+            </div>
+
+            <div>
+                <div class="box-blue box-spin"></div>
+            </div>
+
+            <div>
+                <div class="box-green">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, nostrum? Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Atque, vitae?</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="box-yellow"></div>
+            </div>
+
+            <div>
+                <div class="transform">
+                    <div class="box-purple">1.DİV</div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    </section>
+
+    <!-- transition -->
+    <section>
+        <div class="box-darkgreen">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione asperiores cupiditate recusandae blanditiis
+            </p>
+            
+        </div>
+        <hr>
+    </section>
+
+    <!-- transition -->
+
+    <section>
+        <div class="box-container-2">
+            <div class="box-darkblue"></div>
+            <div class="box-darkred"></div>
+            <div class="box-darkyellow"></div>
+        </div>
+        <hr>
+    </section>
+
+    <!-- animasyon -->
+
+    <section>
+        <div class="box-colorful"></div>
+    </section>
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

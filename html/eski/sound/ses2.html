@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox ile Ses Kontrolü</title>
+</head>
+<body>
+    <audio id="myAudio" controls autoplay>
+        <source src="spring_in_my_step.mp3" type="audio/mpeg">
+        Tarayıcıınız ses etiketini desteklemiyor.
+    </audio>
+
+    <label>
+        <input type="checkbox" id="soundToggle"> Ses Aç/Kapa
+    </label>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+        const soundToggle = document.getElementById('soundToggle');
+        audio.play();
+
+        soundToggle.addEventListener('change', () => {
+            if (soundToggle.checked) {
+                audio.play();
+            } else {
+                audio.pause(); 
+                audio.currentTime = 0; // Ses dosyasını başa alır
+            }
+        });
+    </script>
+</body>
+</html>

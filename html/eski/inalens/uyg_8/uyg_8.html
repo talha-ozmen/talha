@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .header-arkaplan {
+            background-image: url(image/inelans-bg-1.webp);
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .site-arkaplan-siyah{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        .site-arkaplan{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            opacity: 1;
+        }
+        .site-con,.site-wrap{
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            opacity: 1;
+        }
+        .site-con{
+            overflow: hidden;
+        }
+        .site-slide{
+            width: 100%;
+            height: 100vh;
+            opacity: 1;
+            margin: 0;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet{
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 3px solid gray;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container site-con">
+        <div class="swiper-wrapper site-wrap">
+            <div class="swiper-slide site-slide" aria-label="1">
+                <div class="site-arkaplan-siyah"></div>
+                <img class="site-arkaplan" src="image/b4.webp" alt="">
+            </div>
+            <div class="swiper-slide site-slide" aria-label="2">
+                <div class="site-arkaplan-siyah"></div>
+                <img class="site-arkaplan" src="image/inelans-bg-1.webp" alt="">
+            </div>
+            <div class="swiper-slide site-slide">
+                <div class="site-arkaplan-siyah"></div>
+                <img class="site-arkaplan" src="image/inelans-bg.webp" alt="">
+            </div>
+            <div class="swiper-pagination">
+                <span aria-label="1"></span>
+                <span aria-label="2"></span>
+            </div>
+        </div>
+        <script>
+            
+            var mySwiper = new Swiper('.swiper-container', {
+           lazy: true,
+           loop: true,
+           speed: 300,
+           effect: 'fade',
+           fadeEffect: {
+             crossFade: true
+           },
+           autoplay: {
+               delay: 500000000000,
+               disableOnInteraction: false,
+           },
+         })
+
+         var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+        </script>
+        
+        <div class="menu-container">
+            <input type="checkbox" class="burger-menu">
+            <span class="header-1"></span>
+            <span class="header-2"></span>
+            <span class="header-3"></span>
+            <div class="header-menu">
+                <a href="anasayfa.html" class="header-menu-link">Anasayfa</a>
+                <a href="anasayfa.html" class="header-menu-link">Hakımızda</a>
+                <a href="anasayfa.html" class="header-menu-link">Odalarımız</a>
+                <a href="anasayfa.html" class="header-menu-link">İletişim</a>
+                <a href="anasayfa.html" class="header-menu-link">TR</a>
+                <a href="#iletisim" class="burger-iletisim-link"><i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                    Hemen Arayın</a>
+            </div>
+        </div>
+    
+        <header>
+            <div class="area header-area">
+    
+                <img class="inalens-logo" src="image/inalens-hotel.png" alt="">
+                <div class="header-menu">
+                    <a href="#" class="header-link header-link-anasayfa">Anasayfa</a>
+                    <a href="#" class="header-link">Hakkımızda</a>
+                    <a href="#" class="header-link">Odalarımız</a>
+                    <a href="#" class="header-link">İletişim</a>
+                    <a href="#" class="header-link">TR</a>
+                </div>
+    
+                <a href="#" class="backg-color btn header-btn">Hemen Arayın</a>
+    
+            </div>
+        </header>
+    
+        <!-- banner -->
+        <div class="banner">
+            <div class="area">
+                <div class="banner-area">
+                    <h2>Hava Limanına <br> Sadece <span class="color">15 Dakika</span><br>Uzaklıktayız</h2>
+                    <div class="icon-container banner-icon-container">
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram banner-icon banner-icon-instagram" 
+                        style="display: flex;"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook banner-icon"
+                            style="display: flex;"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin banner-icon"
+                            style="display: flex;"></i></a>
+                        <a href="https://www.gmail.com/"><i class="fa-solid fa-envelope banner-icon"
+                            style="display: flex;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- rezervasyon -->
+    <div class="rezervasyon">
+        <div class="area rezervasyon-area">
+            <h3 class="rezervasyon-baslik">Rezervasyon Alın</h3>
+            <div class="rezervasyon-tarih">
+                <div class="rezervasyon-container">
+                    <div class="rezervasyon-giris">
+                        <p>Giriş Tarihi</p>
+                        <input type="datetime-local" name="" id="" class="datetime"placeholder="Gün/Ay/yıl">
+                    </div>
+                    <div>
+                        <p>Çıkış Tarihi</p>
+                        <input type="datetime-local" name="" id="" class="datetime" placeholder="Gün/Ay/yıl">
+                    </div>
+
+                </div>
+                <div class="rezervasyon-container">
+                    <div>
+                        <p>Oda Sayısı</p>
+                        <input type="number" name="" id="" class="number">
+                    </div>
+                    <div>
+                        <p>Kişi Sayısı</p>
+                        <input type="number" name="" id="" class="number" >
+                    </div>
+                </div>
+                <div class="rezervasyon-btn-container">
+
+                    <a href="#" class="backg-color btn rezervasyon-btn">Oda Arayın</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- hakkımızda -->
+
+    <div class="hakkimizda" id="hakkimizda">
+        <div class="hakkimizda-area area">
+
+            <div class="hakkimizda-konusma">
+                <h2 class="hakkimizda-margin">Hizmetlerimiz</h2>
+                <h1 class="hakkimizda-margin">Hakkımızda</h1>
+                <p class="hakkimizda-text hakkimizda-margin">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                    metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                    bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                    alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                    metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını
+                    sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik
+                    dizgiye de sıçramıştır. Lorem Ipsum, dizgi ve baskı endüstrisinde
+                    kullanılan mıgır metinlerdir. bilinmeyen bir matbaacının bir
+                    hurufat numune kitabı oluşturmak</p>
+            </div>
+            <div>
+                <img class="hakkimizda-foto" src="image/hotel-receptionist-work.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- slayt -->
+
+    <h2 class="text-baslik">Odalarımız</h2>
+
+    <div class="slayt">
+
+        <div class="slayt-area">
+
+            <div class="swiper-container slayt-con" >
+                <div class="swiper-wrapper slayt-wrap">
+
+                    <div class="swiper-slide slayt-slide">
+                        <img src="image/resim1.png" alt="" class="yatak-foto">
+                        <div class="yatak-arkaplan" id="yatak-arkaplan1">
+                            <div class="yatak-icon-yazi">
+                                <p>2 Kişilik Oda</p>
+                                <div class="yatak-pad">
+                                    <img class="resimcik cube" src="image/cube.png" alt="">
+                                    <p class="yatak-yazilar">30m2</p>
+
+                                </div>
+                                <div>
+                                    <img class="resimcik" src="image/bed.png" alt="">
+                                    <p class="yatak-yazilar">1 Yatak</p>
+
+                                </div>
+                                <div>
+                                    <img class="resimcik" src="image/shower.png" alt="">
+                                    <p class="yatak-yazilar banyo-yazi">1 Banyo</p>
+
+                                </div>
+                            </div>
+                            <a href="https://tr.hotels.com/ho2429573696/invalens-hotel-arnavutkoy-turkiye/"
+                                class="seffaf-btn yatak-detayli-bilgi">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slayt-slide">
+                        <img src="image/resim2.png" alt="" class="yatak-foto">
+                        <div class="yatak-arkaplan" id="yatak-arkaplan1">
+                            <div class="yatak-icon-yazi">
+                                <p>4 Kişilik Oda</p>
+                                <div class="yatak-pad">
+                                    <img class="resimcik cube" src="image/cube.png" alt="">
+                                    <p class="yatak-yazilar">60m2</p>
+
+                                </div>
+                                <div>
+                                    <img class="resimcik" src="image/bed.png" alt="">
+                                    <p class="yatak-yazilar">4 Yatak</p>
+
+                                </div>
+                                <div>
+                                    <img class="resimcik" src="image/shower.png" alt="">
+                                    <p class="yatak-yazilar banyo-yazi">2 Banyo</p>
+
+                                </div>
+                            </div>
+                            <a href="https://tr.hotels.com/ho2429573696/invalens-hotel-arnavutkoy-turkiye/" class="seffaf-btn yatak-detayli-bilgi">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slayt-slide">
+                        <img src="image/resim3.png" alt="" class="yatak-foto">
+                        <div class="yatak-arkaplan" id="yatak-arkaplan1">
+                            <div class="yatak-icon-yazi">
+                                <p>3 Kişilik Oda</p>
+                                <div class="yatak-pad">
+                                    <img class="resimcik cube" src="image/cube.png" alt="">
+                                    <p class="yatak-yazilar">40m2</p>
+
+                                </div>
+                                <div>
+                                    <img class="resimcik" src="image/bed.png" alt="">
+                                    <p class="yatak-yazilar">3 Yatak</p>
+
+                                </div>
+                                <div>
+                                    <img class="resimcik" src="image/shower.png" alt="">
+                                    <p class="yatak-yazilar banyo-yazi">1 Banyo</p>
+
+                                </div>
+                            </div>
+                            <a href="https://tr.hotels.com/ho2429573696/invalens-hotel-arnavutkoy-turkiye/" class="seffaf-btn yatak-detayli-bilgi">Detaylı Bilgi</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- görsel -->
+
+    
+    <div class="gorsel">
+        <div class="gorsel-area">
+
+            <div class="gorsel-resep">
+                <img class="resep-foto" src="image/gorsel1.png" alt="">
+                <div class="gorsel-arkaplan">
+                    <a href="https://tr.wikipedia.org/wiki/Resepsiyon#:~:text=Resepsiyon%2C%20isim%2C%20sanat%2C%20deneyim,ve%20telekom%C3%BCnikasyon%20sisteminin%20korunmas%C4%B1n%C4%B1%20sa%C4%9Flar."
+                        target="_blank"
+                        class="seffaf-btn gorsel-btn">İletişime Geç</a>
+                    <h1>Resepsiyon</h1>
+                </div>
+            </div>
+            <div class="gorsel-kule">
+                <img class="kule-foto" src="image/gorsel2.png" alt="">
+                <div class="gorsel-arkaplan">
+                    <a href="https://tr.wikipedia.org/wiki/%C4%B0stanbul" target="_blank" class="seffaf-btn gorsel-btn">İletişime Geç</a>
+                    <h1>İstanbul Turu</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- resepsiyon -->
+
+    <div class="resep-1">
+        <img src="image/full-shot-man-carrying-baggage.png" alt="">
+        <div class="resep-1_content">
+            <h2>
+                Lorem Ipsum, kısaca Lipsum, masaüstü
+                yayıncılık ve basın
+            </h2>
+            <a href="#iletisim" class="seffaf-btn">
+                İletişime Geç
+            </a>
+        </div>
+    </div>
+    <!-- yorumlar -->
+     
+<div class="yorum-bolumu">
+    <h2 class="text-baslik musteri-yorum">Müşteri Yorumları</h2>
+
+    <div class="yorum-area">
+
+      <div class="swiper-container slayt-con">
+        <div class="swiper-wrapper slayt-wrap">
+
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+          
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide yorum-slide" style="display: flex;">
+            <div class="yorum">
+              <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır
+                metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini
+                alarak karıştırdığı 1500'lerden beri endüstri standardı sahte
+                metinler olarak kullanılmıştır.</p>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop:true,
+      centeredSlides:true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    
+    
+  </script>
+
+  <!-- iletisim -->
+
+  <div class="iletisim">
+
+    <div class="iletisim-area area" id="iletisim">
+        <div class="iletisim-bilgi">
+            <p class="bize-ulasin">Bize Ulaşın</p>
+            <h2>Rezervasyon İçin <br> İletişim Adreslerimiz</h2>
+            <a class="iletisim-tel" href="tel:123456789">Telefon : +90 123 456 789</a><br>
+            <a href="tel:123456789">Telefon : +90 123 456 789</a><br>
+            <a href="mailto:info@inalenshotel.com">Email : info@inalenshotel.com</a>
+        </div>
+        <form action="">
+            <div class="iletisim-yorum">
+                <div class="iletisim-container b">
+                    <p class="iletisim-yazi">Adınız Soyadınız</p>
+                    <input type="text" class="iletisim-text" placeholder="Ad Soyad">
+                    <p>Tel No</p>
+                    <input type="text" class="iletisim-text" placeholder="123 456 789">
+                    <p>Mesaj</p>
+                    <textarea name="textarea" id="" class="iletisim-textarea"
+                        placeholder="Lorem Ipsum"></textarea><br>
+                    <button type="submit" class="iletisim-gonder">Gönder</button>
+                </div>
+                <div class="iletisim-container">
+                    <p class="iletisim-yazi">Email Adresiniz</p>
+                    <input type="text" class="iletisim-text" placeholder="Emaliniz">
+                    <p>Konu</p>
+                    <input type="text" class="iletisim-text konu" placeholder="Konu">
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  
+<!-- harita -->
+
+
+<div class="harita">
+    <iframe class="harita"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.995256240655!2d28.733227528542077!3d41.183787087712844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caafc3a29aeb0f%3A0xa82a8f18b0fbdc7b!2zxLBOQUxFTlMgQcSwUlBPUlQgT1RFTEPEsEzEsEs!5e0!3m2!1str!2str!4v1719557298511!5m2!1str!2str"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+<!-- footer -->
+ 
+<div class="footer">
+    <div class="footer-container-ikon">
+        <img src="image/Group 5.png" alt="">
+        <div class="c">
+            <div class="footer-ikon">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook footer-ikon-marginl"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin footer-ikon-marginl"></i></a>
+                <a href="https://www.gmail.com/"><i class="fa-solid fa-envelope footer-ikon-marginl"></i></a>
+            </div>
+            <p class="footer-designer">© 2023 in Alens Hotel, Design By DigiMondi.</p>
+        </div>
+    </div>
+
+
+    <div class="footer-area">
+        <div class="footer-hakkimizda">
+            <h2>Hakkımızda</h2>
+            <p>Lorem Ipsum, kısaca Lipsum, masaüstü
+                yayıncılık ve basın yayın sektöründe
+                kullanılan taklit yazı bloğu olarak tanımlanır.
+                Lipsum, oluşturulacak şablon ve taslaklarda
+                içerik yerine geçerek yazı bloğunu
+                doldurmak için kullanılır.
+            </p>
+        </div>
+
+
+        <div class="footer-hizli-link">
+            <div class="footer-ort">
+                <h2>Hızlı Linkler</h2>
+                <a href="#anasayfa">Anasayfa</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#odalarimiz">Odalarımız</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+        </div>
+
+
+
+        <div class="footer-iletisim-bilgileri">
+            <h2>İletişim Bilgileri</h2>
+            <p>Lorem Ipsum, kısaca Lipsum, masaüstü
+                yayıncılık ve basın yayın sektöründe</p>
+            <a href="tel:0123 456 78 91">0123 456 78 91</a> <br>    
+            <a href="mailto:info@inalenshotel.com">info@inalenshotel.com</a>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

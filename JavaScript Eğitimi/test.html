@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animasyonu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 2000px;
+        /* Yeterince kaydırılabilir alan sağlamak için */
+    }
+
+    .content {
+        text-align: center;
+        padding: 50px;
+    }
+
+    .animasyon-oge {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(100px);
+        /* Başlangıçta aşağıda */
+        transition: opacity 1s ease, transform 1s ease;
+        /* Geçiş animasyonu */
+    }
+
+    .animasyon-oge.gorunur {
+        opacity: 1;
+        /* Görünür olacak */
+        transform: translateY(0);
+        /* Normal pozisyonuna gelecek */
+    }
+</style>
+
+<body>
+
+    <section>
+        <div class="banner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="img/banner.png" alt="Decor Chair">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/chair.webp" alt="Decor Chair">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/table.webp" alt="Decor Chair">
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="space"></div>
+        <div class="container catalog">
+            <div class="catalog-content-1">
+                <h2>Tüm Ürünleri Detaylı İnceleyin</h2>
+                <a href="e-catalog.html" title="Katalog" class="button">Kataloğa Gözat</a>
+            </div>
+
+            <div class="catalog-content-2">
+                <a href="e-catalog.html" title="Ürünlerimiz">
+                    <img src="img/katalog.png" alt="Katalog">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="space"></div>
+        <div class="bg-gray">
+
+
+            <div class="container">
+
+                <div class="title">
+                    <h2>POPÜLER ÜRÜNLER</h2>
+                    <p>Popüler Ürünlerimize Göz Atın!</p>
+                </div>
+
+                <div class="popular-product">
+                    <a href="product-detail.html" title="Ürünlerimiz">
+                        <p>Lorem Koltuk</p>
+                        <img src="img/product/product-1.png" alt="Ürünlerimiz">
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" title="Ürünlerimiz">
+                        <p>Lorem Koltuk</p>
+                        <img src="img/product/product-2.png" alt="Ürünlerimiz">
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" title="Ürünlerimiz">
+                        <p>Lorem Koltuk</p>
+                        <img src="img/product/product-3.png" alt="Ürünlerimiz">
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" title="Ürünlerimiz">
+                        <p>Lorem Koltuk</p>
+                        <img src="img/product/product-4.png" alt="Ürünlerimiz">
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" title="Ürünlerimiz">
+                        <p>Lorem Koltuk</p>
+                        <img src="img/product/product-5.png" alt="Ürünlerimiz">
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" title="Ürünlerimiz">
+                        <p>Lorem Koltuk</p>
+                        <img src="img/product/product-6.png" alt="Ürünlerimiz">
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <a href="product.html" class="button" title="Tümünü Gör">Tümünü Gör</a>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="stretcher">
+            <div>
+                <img src="img/garden.webp" alt="Bahçe">
+                <div class="stretcher-icon">
+                    <img src="img/icon/dinner-table.png" alt="Bahçe Mobilyaları">
+                    <p>Bahçe Mobilyaları</p>
+                </div>
+            </div>
+            <div>
+                <img src="img/table.webp" alt="Bahçe">
+                <div class="stretcher-icon">
+                    <img src="img/icon/table.png" alt="Masalar">
+                    <p>Masalar</p>
+                </div>
+            </div>
+            <div>
+                <img src="img/chair.webp" alt="Bahçe">
+                <div class="stretcher-icon">
+                    <img src="img/icon/dining.png" alt="Sandalyeler">
+                    <p>Sandalyeler</p>
+                </div>
+            </div>
+            <div>
+                <img src="img/sofa.webp" alt="Bahçe">
+                <div class="stretcher-icon">
+                    <img src="img/icon/armchair.png" alt="Koltuklar">
+                    <p>Koltuklar</p>
+                </div>
+
+            </div>
+            <div class="bg-orange">
+                <a href="product.html" title="Daha Fazla">
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="content">
+        <h1>Sayfa Kaydırıldıkça Animasyon</h1>
+        <p>Kaydırarak animasyonu görebilirsiniz. Aşağıya kaydırın.</p>
+        <div class="animasyon-oge">
+            <p>Animasyonlu öğe burada olacak!</p>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+        window.addEventListener('scroll', function () {
+            const animasyonOge = document.querySelector('.animasyon-oge');
+            const windowHeight = window.innerHeight; // Görünür ekranın yüksekliği
+            const elementTop = animasyonOge.getBoundingClientRect().top; // Öğenin üst kenarının mesafesi
+
+            if (elementTop < windowHeight) {
+                animasyonOge.classList.add('gorunur'); // Öğeyi görünür hale getir
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ses Kontrolü</title>
+</head>
+<body>
+
+    <audio id="sesDosyasi" src="spring_in_my_step.mp3" preload="auto"></audio>
+    <label>
+        <input type="checkbox" id="sesKontrol" />
+        Ses Çal
+    </label>
+
+    <script>
+        const sesDosyasi = document.getElementById('sesDosyasi');
+        const sesKontrol = document.getElementById('sesKontrol');
+
+        sesKontrol.addEventListener('change', () => {
+            if (sesKontrol.checked) {
+                sesDosyasi.play(); // Checkbox işaretlendiğinde sesi çal
+            } else {
+                sesDosyasi.pause(); // Checkbox işaretlenmediğinde sesi durdur
+                sesDosyasi.currentTime = 0; // Ses dosyasını başa al
+            }
+        });
+    </script>
+
+</body>
+</html>

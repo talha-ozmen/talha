@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #00020b;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    margin-top: 200px;
+    font-family: "Fira Sans", sans-serif;
+    /* font-family: "Afacad Flux", sans-serif; */
+
+}
+.world{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    filter: drop-shadow(0px 0px 150px #35555e);
+    z-index: -1;
+    top: 0;
+}
+
+.world img{
+    position: relative;
+    width: 500px;
+}
+.container{
+    height: 100vh;
+}
+
+.bar-black{
+    background-color: black;
+    width: 100%;
+    height: 8vh;
+    position: relative;
+}
+.bar-top{
+    top: 0;
+}
+.bar-bottom{
+    position: absolute;
+    top: 92vh;
+}
+
+@media(max-width:768px){
+    
+}
+
+
+.text-container{
+    position: relative;
+    bottom: 15rem;
+    font-family: sans-serif;
+}
+
+
+
+.page-title{
+    color: rgb(196, 196, 196);
+    text-shadow: 0px 0px 10px rgba(0, 157, 255);
+    margin: 1rem 0;
+    font-size: 3rem;
+    letter-spacing: 2.6vw;
+    font-weight: 300;
+}
+.page-subtitle{
+    font-weight: 100;
+    color: white;
+    letter-spacing: 1.25vw;
+}
+
+
+.link{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+    bottom: 25vh;
+    font-family: "Fira Sana" , sans-serif;
+}
+.link a{
+    padding: 0 1rem;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+@media (max-width:700px) {
+    .page-title{
+        font-size: 7vw;
+    }
+    .page-subtitle{
+        font-size: 2vw;
+    }
+    link a{
+        font-size: 1vw;
+    }
+    .sound{
+        left: 0;
+    }
+    .bar-black{
+        display: none;
+    }
+    .link{
+        bottom: 15vh;
+    }
+    .world{
+        top: 5rem;
+    }
+    .text{
+        top: 5rem;
+    }
+    .world img{
+        width: 400px;
+    }
+}
+
+@media (max-width: 568px) {
+    .link a{
+        padding: 0 2vw;
+    }
+    .world img{
+        width: 390px;
+    }
+}
+@media (max-width:480px) {
+    .link a{
+        font-size: 3.4vw;
+    }
+}
+@media (max-width:440px) {
+    .world img{
+        width: 85%;
+        top: 10vw;
+
+    }
+}
+
+
+
+
+/* ses animasyonu */
+
+.sound{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin: 0 2rem;
+    top: -2rem;
+    right: -90%;
+}
+@media(max-width:700px){
+    .sound{
+        top: 1rem;
+    }
+}
+
+.sound-checkbox{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+}
+.sound-checkbox:checked~#bar-1 {
+    animation: none;
+}
+.sound-checkbox:checked~#bar-2 {
+    animation: none;
+}
+.sound-checkbox:checked~#bar-3 {
+    animation: none;
+}
+.sound-checkbox:checked~#bar-4 {
+    animation: none;
+}
+.sound-checkbox:checked~.music {
+    display: none;
+}
+
+
+
+.sound-stick{
+    width: 2px;
+    height: 1px;
+    background-color: rgb(0, 68, 255);;
+    position: absolute;
+    bottom: 0;
+}
+@keyframes sound1 {
+    0%{
+        height: 10%;
+    }
+    100%{
+        height: 50%;
+    }
+}
+
+#bar-1{
+    animation: sound1 0.5s  infinite ease-in-out alternate;
+}
+@keyframes sound2 {
+    0%{
+        height: 10%;
+    }
+    100%{
+        height: 90%;
+    }
+}
+#bar-2{
+    animation: sound2 0.5s  infinite ease-in-out alternate;
+    animation-delay: 300ms;
+    left: 0.25rem;
+}
+@keyframes sound3 {
+    0%{
+        height: 10%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+#bar-3{
+    animation: sound3 0.5s  infinite ease-in-out alternate;
+    animation-delay: 600ms;
+    left: 0.5rem;
+}
+@keyframes sound4 {
+    0%{
+        height: 10%;
+    }
+    100%{
+        height: 80%;
+    }
+}
+#bar-4{
+    animation: sound4 0.5s  infinite ease-in-out alternate;
+    animation-delay: 900ms;
+    left: 0.75rem;
+}

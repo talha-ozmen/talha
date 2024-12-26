@@ -1,0 +1,142 @@
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+span
+{
+    font-size: 25px;
+    margin: 20px;
+
+}
+
+.formElemanlari
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+.normal
+{
+    width: 400px;
+    height: 150px;
+    background-color: darkolivegreen;
+    border: 2px dotted black;
+    margin: 5px;
+    color: white;
+    padding: 10px;
+}
+.transform
+{
+    -ms-transform:rotate(20deg);
+    -webkit-transform:rotate(20deg);
+    transform:rotate(20deg);
+}
+.transform1
+{
+    -ms-transform:rotate(-20deg);
+    -webkit-transform:rotate(-20deg);
+    transform:rotate(-20deg);
+}
+.transform2
+{
+    -ms-transform:rotate(10deg);
+    -webkit-transform:rotate(10deg);
+    transform:rotate(10deg);
+}
+.normal1
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    margin-left: 50px;
+    -webkit-perspective: 100px;
+    perspective: 100px;
+}
+.normal2
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    margin-left: 50px;
+    -webkit-perspective: none;
+    perspective: none;
+}
+.transformm{
+    padding: 50px;
+    position: absolute;
+    border: 1px solid red;
+    background-color: darkgoldenrod;
+    background: (0,0,0,0.5);
+    -webkit-transform-style:preserve-3d;
+    -webkit-transform:rotateX(45deg);
+    transform-style:preserve-3d ;
+    transform: rotateX(45deg);
+   
+}
+
+.transtition
+{
+    width: 150px;
+    height: 100px;
+    background-color: darkslategray;
+    color: #FFF;
+    transition: width 1s ease-in-out 9ms;
+}
+.transtition:hover
+{
+    width: 890px;
+}
+.kaydir
+{
+    clear: both;
+    width: 95%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #FFF;
+
+}
+
+.kaydir div
+{
+    flex: 1 ;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    background-color: darkred;
+    transition: all .5s;
+    text-align: center;
+    padding: 25px;
+}
+
+.kaydir div:hover
+{
+    flex: 1.5 ;
+    background-color: darkkhaki;
+}
+.rules
+{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    position: relative;
+}
+.rules:hover{
+    animation-iteration-count:infinite;
+    animation-duration: alternate;
+    animation-name: Renk;
+    animation-duration: 4s;
+}
+
+@keyframes Renk {
+    0%{background-color: red; left: 0px;   top: 0px;}
+    25%{background-color: rgb(0, 123, 255); left: 200px; top: 0;}
+    50%{background-color: rgb(202, 44, 226); left: 200px; top: 200px;}
+    75%{background-color: rgb(0, 213, 255); left: 0; top: 200px;}
+    100%{background-color: rgb(210, 251, 75); left: 0; top: 0;}
+}
+

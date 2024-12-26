@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="tr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yukarıdan Aşağıya Animasyon</title>
+        <style>
+            #number-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 24px;
+                /* Sayı boyutunu ayarlayabilirsiniz */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="number-container">
+            2024 05 04
+        </div>
+
+        <script>
+            // Sayıları al ve alt alta yerleştir
+            const container = document.getElementById('number-container');
+            const numbers = container.textContent.trim().split(' ');
+
+            // Önceki içeriği temizle
+            container.innerHTML = '';
+
+            // Her bir sayıyı yeni bir div içine koy
+            numbers.forEach(number => {
+                const numberDiv = document.createElement('div');
+                numberDiv.textContent = number;
+                container.appendChild(numberDiv);
+            });
+
+        </script>
+    </body>
+
+    </html>
+
+
+</body>
+
+</html>
