@@ -6,12 +6,12 @@ document.getElementById("java").style.color = "green";
 
 const todoList = document.querySelector(".list-group");
 
-var value ;
+var value;
 
 value = todoList.childNodes;
 value = todoList.children;
 
-function bas(){
+function bas() {
     value = todoList.children[2].style.color = "red";
 }
 
@@ -27,7 +27,7 @@ const a = 10; // doğrusu
 console.log(a);
 
 // ama
-const c = [1 , 2 , 3 , 4 , 5]
+const c = [1, 2, 3, 4, 5]
 console.log(c);
 
 c.push(6); // buda doğrudur 
@@ -70,18 +70,18 @@ console.clear();
 
 var toplam = "35" + 10;
 console.log(toplam);
-console.log(typeof toplam );
+console.log(typeof toplam);
 
 console.log("-----------------------------------------------------------------------")
 
 var toplam = Number("35") + 10;
 console.log(toplam);
-console.log(typeof toplam );
+console.log(typeof toplam);
 
 
 
 
-// -----------------------------------------------------------------
+// ------------------------------------------
 
 console.clear();
 var deger;
@@ -107,17 +107,17 @@ console.log(deger);
 
 
 const programcı = {
-    name : "programcı",
-    age : 25 ,
+    name: "programcı",
+    age: 25,
     email: "mail@gmail.com",
-    langs: ["java" , "python" , "js"],
-    
-    address : {
+    langs: ["java", "python", "js"],
+
+    address: {
         city: "ankara",
         street: "Bahçelievler"
     },
 
-    work : function(){
+    work: function () {
         console.log("programcı çalışıyor");
     }
 };
@@ -149,21 +149,23 @@ console.log(4 > 2);
 console.log(4 != 2);
 
 
-var  not1 = document.getElementById("not1").value;
-var  not2 = document.getElementById("not2").value;
-var  not3 = document.getElementById("not3").value;
-var  not4 = document.getElementById("not4").value;
+var not1 = Number(document.getElementById("not1").value);
+var not2 = Number(document.getElementById("not2").value);
+var not3 = Number(document.getElementById("not3").value);
+var not4 = Number(document.getElementById("not4").value);
 
-var toplam =  not1 + not2 + not3 + not4;
+var toplam = not1 + not2 + not3 + not4;
 
 
-var ortalama =  (not1 + not2 + not3 + not4)/4;
+var ortalama = (not1 + not2 + not3 + not4) / 4;
 // veya
-var ortalama2 =  toplam/4;
+var ortalama2 = toplam / 4;
 
-// console.log(ortalama , ortalama2);
+console.log(ortalama, ortalama2);
 
 
-function yazdir(){
+var button = document.getElementById("calc");
+button.addEventListener('click', function () {
     document.getElementById("ort").innerHTML = ortalama;
-}
+});
+
