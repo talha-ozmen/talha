@@ -203,6 +203,26 @@ function insan(adi, yasi) {
 
 insan("t", 25);
 
+
+const database = {
+    host: "localhost",
+    add: function(){
+        console.log("eklendi");
+    },
+    get: function(){
+        console.log("elde edildi")
+    },
+    update: function(){
+        console.log(`id: ${id} "güncellendi`);
+    },
+    delete: function(){
+        console.log(`${id} silindi`);
+    }
+}
+
+console.log(database.update)
+
+
 //-----------------------------------------------------
 
 var karecevap
@@ -235,10 +255,31 @@ function sayibulmaoyunu(){
 
     if(yuvarlanmıssayi == tahmini){
         document.getElementById("kutlama").innerHTML = "doğru bildiniz";
+        document.getElementById("kutlama").style.color = "green";
     }
-   else{
-        document.getElementById("kutlama").innerHTML ="cevap " + tahmini + " değil tekrar deneyiniz";
+    else if(yuvarlanmıssayi >= tahmini){
+        document.getElementById("kutlama").innerHTML = "tutuğum sayı " + tahmini + " değil daha büyük";
+        document.getElementById("kutlama").style.color = "#c6941f";
+    }
+    else if(yuvarlanmıssayi <= tahmini){
+        document.getElementById("kutlama").innerHTML = "tutuğum sayı " + tahmini + " değil daha küçük";
+        document.getElementById("kutlama").style.color = "red";
+    }
+    else{
+        document.getElementById("kutlama").innerHTML ="cevap " + tahmini + " değil benim tutuğum sayıya çok uzak";
+        document.getElementById("kutlama").style.color = "red";
     }
 
 }
+
+console.log("--------------------------------------------");
+
+console.log(window);
+
+
+var ekranyukseligi ;
+
+ekranyukseligi = window.outerHeight ;
+
+console.log(ekranyukseligi);
 
