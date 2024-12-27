@@ -206,16 +206,16 @@ insan("t", 25);
 
 const database = {
     host: "localhost",
-    add: function(){
+    add: function () {
         console.log("eklendi");
     },
-    get: function(){
+    get: function () {
         console.log("elde edildi")
     },
-    update: function(){
+    update: function () {
         console.log(`id: ${id} "güncellendi`);
     },
-    delete: function(){
+    delete: function () {
         console.log(`${id} silindi`);
     }
 }
@@ -250,36 +250,96 @@ console.log(yuvarlanmıssayi)
 
 var tahmini;
 
-function sayibulmaoyunu(){
+function sayibulmaoyunu() {
     tahmini = Number(document.getElementById("sayibulma").value);
 
-    if(yuvarlanmıssayi == tahmini){
+
+    const eminmisin = confirm(tahmini + " tahmininde emin misin");
+    if (eminmisin == true) {
+        console.log("Eminmiş")
+    }
+    else {
+        console.log("Emin Değilmiş");
+    }
+
+
+    if (yuvarlanmıssayi == tahmini) {
         document.getElementById("kutlama").innerHTML = "doğru bildiniz";
         document.getElementById("kutlama").style.color = "green";
     }
-    else if(yuvarlanmıssayi >= tahmini){
+    else if (yuvarlanmıssayi >= tahmini) {
         document.getElementById("kutlama").innerHTML = "tutuğum sayı " + tahmini + " değil daha büyük";
         document.getElementById("kutlama").style.color = "#c6941f";
     }
-    else if(yuvarlanmıssayi <= tahmini){
+    else if (yuvarlanmıssayi <= tahmini) {
         document.getElementById("kutlama").innerHTML = "tutuğum sayı " + tahmini + " değil daha küçük";
         document.getElementById("kutlama").style.color = "red";
     }
-    else{
-        document.getElementById("kutlama").innerHTML ="cevap " + tahmini + " değil benim tutuğum sayıya çok uzak";
+    else {
+        document.getElementById("kutlama").innerHTML = "cevap " + tahmini + " değil benim tutuğum sayıya çok uzak";
         document.getElementById("kutlama").style.color = "red";
     }
 
 }
+
+
+
 
 console.log("--------------------------------------------");
 
 console.log(window);
 
 
-var ekranyukseligi ;
+var ekranyukseligi;
 
-ekranyukseligi = window.outerHeight ;
+ekranyukseligi = window.outerHeight;
 
 console.log(ekranyukseligi);
 
+// const toplama = prompt("2 + 2 = ?");
+
+// // promptun tipi string olarak dönüyor eğer aşağıdaki gibi 3 eşitir
+// // ile yapınca tipleride kontrolettiği için cevap yanlıştır çalışacaktır
+
+// // if (toplama === 4){
+// //     console.log("cevabınız doğru")
+// // }
+
+// if (toplama == 4){
+//     console.log("cevabınız doğru")
+// }
+// else{
+//     console.log("cevabınız yanlış")
+// }
+
+
+
+var hostadi = window.location.host;
+
+console.log(hostadi);
+/*
+const sayfayenilemsinmi = window.confirm("sayfa yenilensin mi");
+
+if(sayfayenilemsinmi == true){
+    const sayfayenile = window.location.reload();
+}
+else{
+    console.log("sayfa yenilenmedi")
+}
+*/
+
+
+/*
+
+window.addEventListener('scroll', function () {
+  const animasyonOge = document.querySelector('.indust-boxs');
+
+  const windowHeight = window.innerHeight; // Görünür ekranın yüksekliği
+  const elementTop = animasyonOge.getBoundingClientRect().top; // Öğenin üst kenarının mesafesi
+
+  if (elementTop < windowHeight) {
+      animasyonOge.classList.add('a'); // Öğeyi görünür hale getir
+  }
+});
+
+*/
