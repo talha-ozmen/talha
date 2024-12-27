@@ -343,3 +343,64 @@ window.addEventListener('scroll', function () {
 });
 
 */
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var activeCategory = "*";
+
+    // Kategorilere tıklandığında
+    var categoryItems = document.querySelectorAll(".blog-cat-area p");
+    categoryItems.forEach(function (category) {
+        category.addEventListener("click", function () {
+            activeCategory = category.getAttribute("data-cat");
+
+            // Tıklanan öğeye sarı renk ekle ve diğerlerini kaldır
+            category.classList.add('color-yellow');
+            categoryItems.forEach(function (sibling) {
+                if (sibling !== category) {
+                    sibling.classList.remove("color-yellow");
+                }
+            });
+
+            filterResults();
+        });
+    });
+
+    // Arama kutusuna yazıldığında
+    var searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('keyup', function () {
+        filterResults();
+    });
+
+    function filterResults() {
+        var searchValue = searchInput.value.toLowerCase();
+
+        var resultItems = document.querySelectorAll(".result-item");
+        resultItems.forEach(function (item) {
+            var itemCategory = item.getAttribute("data-cat");
+            var itemText = item.querySelector("h3").textContent.toLowerCase();
+
+            if (
+                (activeCategory === "*" || itemCategory === activeCategory) &&
+                itemText.includes(searchValue)
+            ) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+});
+
+
+
+
+// results.forEach(function (result) {
+//     var name = result.getAttribute('data-name').toLowerCase();
+//     if (name.includes(query)) {
+//         result.classList.remove('hidden');  // Diğer öğelerden 'active' sınıfını kaldıralım
+//     } else {
+//         result.classList.add('hidden');  // 'active' sınıfını sadece eşleşen öğeye ekleyelim
+//     }
+// });
