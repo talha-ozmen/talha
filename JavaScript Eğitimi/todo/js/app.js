@@ -36,19 +36,18 @@ element2.forEach(
     }
 )
 
-function todoEkleme(){
+let todoLi = document.querySelector(".list-group");
 
+todoLi.children[2].textContent = "değişti";
+todoLi.children[2].style.color = "orange";
+todoLi.style.color= "red";
+
+if(!todoLi.textContent()){
+    console.log("değişmissssssss")
+}
+else{
+    console.log("degissssmemisis")
 }
 
-let todoLi = document.querySelector(".list-group")
+console.log(todoLi);
 
-
-
-// results.forEach(function (result) {
-//     var name = result.getAttribute('data-name').toLowerCase();
-//     if (name.includes(query)) {
-//         result.classList.remove('hidden');  // Diğer öğelerden 'active' sınıfını kaldıralım
-//     } else {
-//         result.classList.add('hidden');  // 'active' sınıfını sadece eşleşen öğeye ekleyelim
-//     }
-// });
