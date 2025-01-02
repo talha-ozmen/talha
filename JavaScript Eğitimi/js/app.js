@@ -250,7 +250,7 @@ console.log(yuvarlanmıssayi)
 
 var tahmini;
 
-function sayibulmaoyunu() {
+function sayibulmaoyunu(EminMi) {
     tahmini = Number(document.getElementById("sayibulma").value);
 
 
@@ -259,7 +259,8 @@ function sayibulmaoyunu() {
         console.log("Eminmiş")
     }
     else {
-        console.log("Emin Değilmiş");
+        console.log(tahmini + " Tahmininde emin Değilmiş");
+        return EminMi;
     }
 
 
@@ -346,6 +347,10 @@ window.addEventListener('scroll', function () {
 
 
 
+// !!!
+// DOMContentLoaded html yüklenince çalışır
+// window.onload html css resimler hepsinin yüklenmesini bekler
+
 document.addEventListener("DOMContentLoaded", function () {
     var activeCategory = "*";
 
@@ -381,18 +386,43 @@ document.addEventListener("DOMContentLoaded", function () {
             var itemCategory = item.getAttribute("data-cat");
             var itemText = item.querySelector("h3").textContent.toLowerCase();
 
-            if (
-                (activeCategory === "*" || itemCategory === activeCategory) &&
-                itemText.includes(searchValue)
-            ) {
+            if ((activeCategory === "*" || itemCategory === activeCategory) && itemText.includes(searchValue))
+            {
                 item.style.display = "block";
-            } else {
+            }
+            else
+            {
                 item.style.display = "none";
             }
         });
     }
 });
 
+
+const element = document.querySelectorAll(".list-group-item");
+
+
+// forech kaç tane varsa o kadar tekrarlıyor 4 tane list-group-item var 4 kere tekrarlıyor
+element.forEach(
+    function(el){
+        el.style.color = "red";
+    }
+);
+
+let element2 = document.querySelectorAll("li:nth-child(even)");
+
+element2.forEach(
+    function(el){
+        el.style.color = "green"
+        el.style.background = "#ccc"
+    }
+)
+
+function todoEkleme(){
+
+}
+
+let todoLi = document.querySelector(".list-group")
 
 
 
