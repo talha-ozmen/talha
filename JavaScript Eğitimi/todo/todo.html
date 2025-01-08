@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-danger">Todo Ekleyin</button>
+                    <button type="button" class="btn btn-danger" id="todoekle" onclick="todoekleme()">Todo Ekleyin</button>
                 </form>
 
             </div>
@@ -68,9 +68,10 @@
                         </a>
 
                     </li>
+
                 </ul>
                 <hr>
-                <a id="clear-todos" class="btn btn-dark" href="#" title="w">Tüm Taskları Temizleyin</a>
+                <a id="clear-todos" class="btn btn-dark" href="#" title="w" onclick="todosilme()">Tüm Taskları Temizleyin</a>
             </div>
         </div>
 
