@@ -170,49 +170,5 @@ function test() {
 
 */
 
-console.clear();
+
 // --------------------
-
-const filterinput = document.getElementById("todo");
-
-// focus olunca console loga alttakileri yazdırıyor
-filterinput.addEventListener("focus", function(e){
-    console.log(e);
-    console.log(e.type);
-    console.log(e.target);
-    console.log(e.target.placeholder);
-    console.log(e.target.className);
-})
-
-// klavye ile 
-
-// keypress 
-// keypress sadece harfleri ve sayıları yazdırır
-// document.addEventListener("keypress",run);
-
-// function run(e){
-
-//     console.log(e.which); // asci tablosuna göre yazdırır
-//     console.log(e.key); // bastığı tuşu yazdırır
-
-// }
-
-// keydown 
-// keydown bastığı anda yazdırır
-document.addEventListener("keypress",run);
-
-function run(e){
-
-    console.log(e.key); // bastığı tuşu yazdırır
-
-}
-
-// keyup
-// keyup basmayı bıraktığı anda yazdırır
-// document.addEventListener("keypress",run);
-
-// function run(e){
-
-//     console.log(e.key); // bastığı tuşu yazdırır
-
-// }
