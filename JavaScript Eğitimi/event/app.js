@@ -63,10 +63,21 @@ const baslik = document.querySelector("#tasks-title");
 
 // -------------------------------
 
-baslik.addEventListener("mouseup" , ma);
+// // mouse'in mouseup mousedown mouseover mouseout gibi eventleri varmış
+// baslik.addEventListener("mouseover" , fare);
 
-function ma(e){
-    console.log(e.type);
+// function fare(e){
+//     console.log(e.type);
     
-    console.log("-----------------------")
+//     console.log("-----------------------")
+// }
+
+const cardbody = document.getElementById("kart");
+
+// cardbody.addEventListener("mouseenter" , fare)
+cardbody.addEventListener("mouseenter" , fare)
+cardbody.addEventListener("mouseleave" , fare)
+
+function fare(e){
+    console.log(e.type);
 }
