@@ -10,7 +10,19 @@ eventlisteners();
 function eventlisteners() {
     form.addEventListener("submit", addtodo);
     document.addEventListener("DOMContentLoaded",loadAllTodosToUI);
+    secondcardbody.addEventListener("click",deleteTodo);
+    clearbutton.addEventListener("click",deleteTodoFromStorage)
 };
+
+function deleteTodo(e){
+    // console.log(e.target); // burada nereye tıklandığını göstericek
+    if(e.target.className == "fa fa-remove"){
+        console.log("sil");
+        e.target.parentElement.parentElement.remove();
+        showalert("success","Todonuz Başarılı Bir Şekilde Silindi.")
+    }
+    
+}
 
 function loadAllTodosToUI(){
     let todos = gettodosfromstroge();
@@ -81,4 +93,14 @@ function addtostorage(newtodo){
     let todos = gettodosfromstroge();
     todos.push(newtodo);
     localStorage.setItem("todos" , JSON.stringify(todos));
+}
+
+function deleteTodoFromStorage(){
+    let todos = gettodosfromstroge();
+
+    todos.forEach(function(todo,index){
+        if(todo === deletetodo){
+            todos.splice(index,1);
+        }
+    })
 }
