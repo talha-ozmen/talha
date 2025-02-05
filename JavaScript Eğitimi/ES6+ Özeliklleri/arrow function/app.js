@@ -1,7 +1,7 @@
 const merhaba = function(){ 
     console.log("merhaba") 
 } 
-const merhaba2 = () =>{ 
+const merhaba2 = () => { 
     console.log("merhabaa2") 
 } 
  // burdaki 2 kodda aynı işi yapıyor
