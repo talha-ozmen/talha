@@ -20,6 +20,6 @@
 
 const addnumbers = (a,b,c) => console.log(a+b+c);
 
-const numbers3 = [100,200,300]
+const numbers3 = [100,200,300];
 
 addnumbers(...numbers3);
